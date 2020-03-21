@@ -79,4 +79,5 @@ lvls = np.logspace(-2, 3, 20)
 plt.contour(xs, ys, J_vals, levels=lvls, norm=LogNorm())
 plt.plot(theta[0], theta[1], c='r', marker="x")
 
+plt.show()
 input('ex1 Finished. Press ENTER to exit')

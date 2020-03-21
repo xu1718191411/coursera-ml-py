@@ -13,7 +13,17 @@ def gradient_descent(X, y, theta, alpha, num_iters):
         #
         # Hint: X.shape = (97, 2), y.shape = (97, ), theta.shape = (2, )
 
+        m = np.dot(X, theta)
+        k = m - y
+        k = np.reshape(k,[-1,1])
 
+        ss = k * X
+
+        jj = np.sum(ss,axis=0)
+
+        gradient = jj / X.shape[0]
+
+        theta = theta - alpha * gradient
         # ===========================================================
         # Save the cost every iteration
         J_history[i] = compute_cost(X, y, theta)
