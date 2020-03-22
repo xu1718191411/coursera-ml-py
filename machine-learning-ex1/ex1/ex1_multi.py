@@ -62,6 +62,7 @@ plt.figure()
 plt.plot(np.arange(J_history.size), J_history)
 plt.xlabel('Number of iterations')
 plt.ylabel('Cost J')
+plt.show()
 
 # Display gradient descent's result
 print('Theta computed from gradient descent : \n{}'.format(theta))
@@ -70,14 +71,19 @@ print('Theta computed from gradient descent : \n{}'.format(theta))
 # ===================== Your Code Here =====================
 # Recall that the first column of X is all-ones. Thus, it does
 # not need to be normalized.
-price = 0  # You should change this
+px = [1650, 3]
+px = (px - mu) / sigma
 
+px = np.insert(px, 0, 1)
+
+price = np.dot(px, theta)  # You should change this
 
 # ==========================================================
 
 print('Predicted price of a 1650 sq-ft, 3 br house (using gradient descent) : {:0.3f}'.format(price))
 
-input('Program paused. Press ENTER to continue')
+input('Program paused. Press ENTER to continue'
+      '')
 
 # ===================== Part 3: Normal Equations =====================
 
@@ -110,7 +116,6 @@ print('Theta computed from the normal equations : \n{}'.format(theta))
 # Estimate the price of a 1650 sq-ft, 3 br house
 # ===================== Your Code Here =====================
 price = 0  # You should change this
-
 
 # ==========================================================
 

@@ -39,7 +39,15 @@ def gradient_descent_multi(X, y, theta, alpha, num_iters):
     for i in range(0, num_iters):
         # ===================== Your Code Here =====================
         # Instructions : Perform a single gradient step on the parameter vector theta
-        #
+
+
+        s1 = np.dot(X,theta) - y
+        s1 = np.reshape(s1,(-1,1))
+        s2 = s1 * X
+        s3 = np.sum(s2,axis=0)
+        s4 = s3 / m
+
+        theta = theta - alpha * s4
 
 
         # ===========================================================
