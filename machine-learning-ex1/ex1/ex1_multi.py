@@ -115,7 +115,10 @@ print('Theta computed from the normal equations : \n{}'.format(theta))
 
 # Estimate the price of a 1650 sq-ft, 3 br house
 # ===================== Your Code Here =====================
-price = 0  # You should change this
+
+px = [1650, 3]
+px = np.insert(px, 0, 1)
+price = np.dot(px, theta)  # You should change this
 
 # ==========================================================
 
