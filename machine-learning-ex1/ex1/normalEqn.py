@@ -10,10 +10,8 @@ def normal_eqn(X, y):
     #
 
     XT = X.T
-
-    s1 = np.dot(X, XT)
-    s1 = 1 / s1
-    s2 = np.dot(XT, s1)
-    theta = np.dot(s2, y)
-
+    s1 = np.dot(XT, X)
+    s2 = np.linalg.pinv(s1)
+    s2 = np.dot(s2, XT)
+    theta = np.dot(s2, y.reshape(47,1))
     return theta

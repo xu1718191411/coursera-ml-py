@@ -118,7 +118,7 @@ print('Theta computed from the normal equations : \n{}'.format(theta))
 
 px = [1650, 3]
 px = np.insert(px, 0, 1)
-price = np.dot(px, theta)  # You should change this
+price = np.dot(px, theta)[0]  # You should change this
 
 # ==========================================================
 
