@@ -9,10 +9,17 @@ def cost_function(theta, X, y):
     cost = 0
     grad = np.zeros(theta.shape)
 
+    h = sigmoid(np.dot(X,theta))
+
+    cost = (1/m) * np.sum(-y * np.log(h) - (1 - y) * np.log(-h + 1),0)
+
+    grad = (1/m) * np.reshape((h - y),[1,100]).dot(X)
+
     # ===================== Your Code Here =====================
     # Instructions : Compute the cost of a particular choice of theta
     #                You should set cost and grad correctly.
     #
+
 
 
     # ===========================================================

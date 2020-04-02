@@ -10,5 +10,10 @@ def sigmoid(z):
     #
     # Hint : Do not import math
 
+    result = 1 + np.exp(-z)
+    result = 1 / result
+    return result
 
-    return g
+
+
+sigmoid(np.array([-50]))
