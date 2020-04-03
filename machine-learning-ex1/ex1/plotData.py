@@ -13,5 +13,7 @@ def plot_data(x, y):
 
 
     # ===========================================================
-
+    plt.scatter(x,y,marker="x",c="r")
+    plt.xlabel("population")
+    plt.ylabel("scallar")
     plt.show()

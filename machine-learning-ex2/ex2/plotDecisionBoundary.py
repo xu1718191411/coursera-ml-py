@@ -34,5 +34,6 @@ def plot_decision_boundary(theta, X, y):
 
         # Plot z = 0
         # Notice you need to specify the range [0, 0]
-        cs = plt.contour(u, v, z, levels=[0], colors='r', label='Decision Boundary')
+        cs = plt.contour(u, v, z, levels=[0], colors='r')
         plt.legend([cs.collections[0]], ['Decision Boundary'])
+        plt.show()
